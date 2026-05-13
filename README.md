@@ -27,9 +27,9 @@ Converter visitantes em membros do grupo, comunicando rapidamente que o grupo en
 
 3. Configure as variáveis de ambiente:
    - Copie o arquivo `.env.example` para `.env.local`
-   - Preencha os valores:
+   - Preencha os valores (opcional):
      ```env
-     NEXT_PUBLIC_WHATSAPP_GROUP_URL=link_do_grupo_aqui
+     NEXT_PUBLIC_WHATSAPP_GROUP_URL=link_do_grupo_aqui (Opcional - Fallback configurado no código)
      NEXT_PUBLIC_GA_MEASUREMENT_ID=seu_id_ga4_opcional
      NEXT_PUBLIC_META_PIXEL_ID=seu_id_pixel_opcional
      ```
@@ -46,7 +46,8 @@ Exemplo de link para rastrear cliques vindos de um grupo específico no Facebook
 
 ## ☁️ Deploy na Vercel
 1. Importe o repositório no dashboard da Vercel.
-2. Configure as variáveis de ambiente (`Environment Variables`) com os mesmos nomes do `.env.local`.
+2. Configure as variáveis de ambiente (`Environment Variables`) se necessário. 
+   - Nota: `NEXT_PUBLIC_WHATSAPP_GROUP_URL` é opcional, pois já possui um fallback para o grupo oficial da Doceira Esperta.
 3. Clique em **Deploy**.
 
 ## 📄 Disclaimer

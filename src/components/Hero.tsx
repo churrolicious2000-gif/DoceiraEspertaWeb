@@ -1,42 +1,55 @@
 import Image from "next/image";
 import { WhatsAppButton } from "./WhatsAppButton";
-import { ShieldCheck } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-cream pt-16 pb-20 sm:pt-24 sm:pb-32">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#FFF8F4_0%,#FDF0EA_100%)] pt-12 pb-20 sm:pt-20 sm:pb-32">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          <div className="lg:w-1/2 text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-chocolate leading-tight mb-6">
-              Achadinhos para doceiras que querem <span className="text-sweet-pink">economizar</span>
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+          <div className="lg:w-1/2 text-center lg:text-left order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-soft/50 text-pink-deep text-sm font-bold mb-6">
+              <Sparkles className="w-4 h-4" />
+              Ideal para doceiras e confeiteiras
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-chocolate leading-[1.1] mb-8">
+              Achadinhos para doceiras que querem <span className="text-pink-deep">economizar</span>
             </h1>
-            <p className="text-lg sm:text-xl text-chocolate-light mb-8 max-w-2xl">
-              Entre no grupo Doceira Esperta e acompanhe ofertas de potinhos, embalagens, moldes, utensílios e produtos úteis para confeitaria.
+            
+            <p className="text-lg sm:text-xl text-chocolate-light mb-10 max-w-2xl leading-relaxed">
+              Entre no grupo Doceira Esperta e acompanhe ofertas de embalagens, potinhos, moldes, utensílios e achadinhos para confeitaria.
             </p>
             
-            <div className="flex flex-col items-center lg:items-start gap-4">
+            <div className="flex flex-col items-center lg:items-start gap-6">
               <WhatsAppButton variant="hero" />
-              <p className="text-sm text-chocolate-light/70 flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-green-500" />
-                Grupo gratuito • Ofertas atualizadas • Confira antes de comprar
-              </p>
+              
+              <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-sm text-chocolate-light font-medium">
+                <span className="flex items-center gap-1.5">
+                  <div className="w-1.5 h-1.5 rounded-full bg-pink-main" />
+                  Grupo gratuito
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <div className="w-1.5 h-1.5 rounded-full bg-pink-main" />
+                  Ofertas atualizadas
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <div className="w-1.5 h-1.5 rounded-full bg-pink-main" />
+                  Confira antes de comprar
+                </span>
+              </div>
             </div>
           </div>
           
-          <div className="lg:w-1/2 relative">
-            <div className="relative w-full aspect-square max-w-lg mx-auto">
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-soft-pink rounded-full blur-2xl opacity-60 animate-pulse" />
-              <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-sweet-pink rounded-full blur-3xl opacity-20" />
-              
-              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform lg:rotate-3 transition-transform hover:rotate-0 duration-500">
+          <div className="lg:w-1/2 order-1 lg:order-2">
+            <div className="relative">
+              <div className="relative rounded-[2rem] overflow-hidden shadow-[0_24px_80px_rgba(90,56,46,0.14)] border border-border-soft">
                 <Image
-                  src="/hero-image.png"
-                  alt="Bancada de Confeitaria"
-                  width={600}
-                  height={600}
-                  className="object-cover"
+                  src="/hero-refined.png"
+                  alt="Doceira Esperta - Achadinhos para Confeitaria"
+                  width={800}
+                  height={800}
+                  className="w-full h-auto object-cover"
                   priority
                 />
               </div>
@@ -44,9 +57,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-      
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-soft-pink rounded-full blur-3xl opacity-30" />
     </section>
   );
 }

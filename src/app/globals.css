@@ -1,35 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFF9F0;
-  --foreground: #3E2723;
-  --sweet-pink: #FF85A1;
-  --soft-pink: #FCE4EC;
-  --cream: #FFF9F0;
-  --chocolate: #3E2723;
-  --chocolate-light: #5D4037;
+  --background: #FFF8F4;
+  --foreground: #4B342C;
+
+  --cream: #FFF8F4;
+  --cream-soft: #FDF0EA;
+  --cream-card: #FFFFFF;
+
+  --pink-soft: #F8D9DF;
+  --pink-main: #E98EA3;
+  --pink-deep: #D96C88;
+
+  --chocolate: #5A382E;
+  --chocolate-light: #7A554A;
+
+  --border-soft: #EFD6D2;
+  --whatsapp: #25D366;
+  --whatsapp-dark: #1DA851;
+
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-sweet-pink: var(--sweet-pink);
-  --color-soft-pink: var(--soft-pink);
   --color-cream: var(--cream);
+  --color-cream-soft: var(--cream-soft);
+  --color-cream-card: var(--cream-card);
+  --color-pink-soft: var(--pink-soft);
+  --color-pink-main: var(--pink-main);
+  --color-pink-deep: var(--pink-deep);
   --color-chocolate: var(--chocolate);
   --color-chocolate-light: var(--chocolate-light);
-  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-border-soft: var(--border-soft);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-dark: var(--whatsapp-dark);
+  
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-playfair), serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }

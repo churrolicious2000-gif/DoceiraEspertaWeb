@@ -26,33 +26,33 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 bg-cream">
-      <div className="container mx-auto px-4 max-w-3xl">
+    <section className="py-24 bg-cream-soft">
+      <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-chocolate mb-4">Dúvidas Frequentes</h2>
-          <div className="w-16 h-1 bg-sweet-pink mx-auto rounded-full" />
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-chocolate mb-6">Dúvidas Frequentes</h2>
+          <div className="w-20 h-1 bg-pink-main mx-auto rounded-full opacity-30" />
         </div>
         
-        <div className="space-y-4">
+        <div className="space-y-6">
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-2xl border border-soft-pink overflow-hidden shadow-sm transition-all"
+              className="bg-white rounded-[2rem] border border-border-soft overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-soft-pink/10 transition-colors"
+                className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-cream/50 transition-colors"
               >
-                <span className="font-bold text-chocolate">{faq.question}</span>
+                <span className="font-serif font-bold text-chocolate text-lg lg:text-xl">{faq.question}</span>
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-sweet-pink" />
+                  <ChevronUp className="w-6 h-6 text-pink-main" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-sweet-pink" />
+                  <ChevronDown className="w-6 h-6 text-pink-main" />
                 )}
               </button>
               
               {openIndex === index && (
-                <div className="px-6 pb-5 text-chocolate-light leading-relaxed animate-in fade-in slide-in-from-top-1 duration-200">
+                <div className="px-8 pb-8 text-chocolate-light leading-relaxed text-base lg:text-lg animate-in fade-in slide-in-from-top-2 duration-500">
                   {faq.answer}
                 </div>
               )}
