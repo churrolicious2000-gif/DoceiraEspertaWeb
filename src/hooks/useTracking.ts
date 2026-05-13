@@ -44,6 +44,8 @@ export function useTracking() {
   }, []);
 
   const trackWhatsAppClick = async () => {
+    const DEFAULT_WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/HEV0O46LCut50NNQQbpAiK";
+    
     const eventData = {
       ...utmData,
       page: window.location.pathname,
@@ -81,7 +83,7 @@ export function useTracking() {
     // Wait 300ms for tracking to complete
     await new Promise((resolve) => setTimeout(resolve, 300));
 
-    const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL;
+    const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL || DEFAULT_WHATSAPP_GROUP_URL;
     if (whatsappUrl) {
       window.location.href = whatsappUrl;
     } else {

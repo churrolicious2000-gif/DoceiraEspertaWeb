@@ -26,11 +26,11 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 bg-cream-light">
+    <section className="py-24 bg-cream-soft">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-chocolate mb-6">Dúvidas Frequentes</h2>
-          <div className="w-20 h-1 bg-primary-pink mx-auto rounded-full opacity-30" />
+          <div className="w-20 h-1 bg-pink-main mx-auto rounded-full opacity-30" />
         </div>
         
         <div className="space-y-6">
@@ -41,18 +41,18 @@ export function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-cream-light/50 transition-colors"
+                className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-cream/50 transition-colors"
               >
                 <span className="font-serif font-bold text-chocolate text-lg lg:text-xl">{faq.question}</span>
                 {openIndex === index ? (
-                  <ChevronUp className="w-6 h-6 text-primary-pink" />
+                  <ChevronUp className="w-6 h-6 text-pink-main" />
                 ) : (
-                  <ChevronDown className="w-6 h-6 text-primary-pink" />
+                  <ChevronDown className="w-6 h-6 text-pink-main" />
                 )}
               </button>
               
               {openIndex === index && (
-                <div className="px-8 pb-8 text-soft-brown leading-relaxed text-base lg:text-lg animate-in fade-in slide-in-from-top-2 duration-500">
+                <div className="px-8 pb-8 text-chocolate-light leading-relaxed text-base lg:text-lg animate-in fade-in slide-in-from-top-2 duration-500">
                   {faq.answer}
                 </div>
               )}

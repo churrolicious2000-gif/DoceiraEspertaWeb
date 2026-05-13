@@ -14,9 +14,9 @@ export function WhatsAppButton({ variant = "simple", className = "" }: WhatsAppB
   const baseStyles = "inline-flex items-center justify-center gap-2 font-bold transition-all duration-500 rounded-full shadow-md hover:shadow-xl active:scale-95";
   
   const variants = {
-    hero: "bg-primary-pink text-white px-10 py-5 text-xl w-full sm:w-auto hover:bg-dark-pink transform hover:-translate-y-1",
-    fixed: "fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[#25D366] text-white px-8 py-4 text-lg w-[90%] sm:hidden shadow-2xl",
-    simple: "bg-primary-pink text-white px-8 py-4 text-lg hover:bg-dark-pink",
+    hero: "bg-whatsapp text-white px-10 py-5 text-xl w-full sm:w-auto hover:bg-whatsapp-dark shadow-[0_14px_35px_rgba(37,211,102,0.28)]",
+    fixed: "fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-whatsapp text-white px-8 py-4 text-lg w-[90%] sm:hidden shadow-2xl hover:bg-whatsapp-dark",
+    simple: "bg-whatsapp text-white px-8 py-4 text-lg hover:bg-whatsapp-dark shadow-md",
   };
 
   return (

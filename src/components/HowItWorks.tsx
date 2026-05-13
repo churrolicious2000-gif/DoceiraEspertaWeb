@@ -26,8 +26,8 @@ export function HowItWorks() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-chocolate mb-4">Como funciona</h2>
-          <p className="text-soft-brown">É simples, rápido e totalmente gratuito.</p>
-          <div className="w-16 h-1 bg-primary-pink mx-auto rounded-full mt-6 opacity-20" />
+          <p className="text-chocolate-light">É simples, rápido e totalmente gratuito.</p>
+          <div className="w-16 h-1 bg-pink-main mx-auto rounded-full mt-6 opacity-20" />
         </div>
         
         <div className="relative">
@@ -37,11 +37,11 @@ export function HowItWorks() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 relative z-10">
             {steps.map((step, index) => (
               <div key={index} className="flex flex-col items-center text-center group">
-                <div className="w-24 h-24 rounded-full bg-cream-light border-2 border-soft-pink/30 text-primary-pink flex items-center justify-center mb-8 shadow-sm group-hover:bg-primary-pink group-hover:text-white transition-all duration-500">
+                <div className="w-24 h-24 rounded-full bg-cream-soft border-2 border-pink-soft text-pink-main flex items-center justify-center mb-8 shadow-sm group-hover:bg-pink-main group-hover:text-white transition-all duration-500">
                   <step.icon className="w-10 h-10" />
                 </div>
                 <h3 className="text-2xl font-serif font-bold text-chocolate mb-4">{step.title}</h3>
-                <p className="text-soft-brown max-w-xs text-sm lg:text-base leading-relaxed">{step.description}</p>
+                <p className="text-chocolate-light max-w-xs text-sm lg:text-base leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
