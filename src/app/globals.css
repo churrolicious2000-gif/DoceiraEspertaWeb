@@ -1,24 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFF9F0;
-  --foreground: #3E2723;
-  --sweet-pink: #FF85A1;
-  --soft-pink: #FCE4EC;
-  --cream: #FFF9F0;
-  --chocolate: #3E2723;
-  --chocolate-light: #5D4037;
+  --background: #FBF5EF;
+  --foreground: #4B3A34;
+  --cream-light: #FFF9F6;
+  --soft-pink: #F6C9D2;
+  --primary-pink: #E98EA3;
+  --dark-pink: #D96C88;
+  --chocolate: #6B4637;
+  --soft-brown: #8A6254;
+  --neutral-text: #4B3A34;
+  --border-soft: #EFD9D7;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-sweet-pink: var(--sweet-pink);
+  --color-cream-light: var(--cream-light);
   --color-soft-pink: var(--soft-pink);
-  --color-cream: var(--cream);
+  --color-primary-pink: var(--primary-pink);
+  --color-dark-pink: var(--dark-pink);
   --color-chocolate: var(--chocolate);
-  --color-chocolate-light: var(--chocolate-light);
+  --color-soft-brown: var(--soft-brown);
+  --color-neutral-text: var(--neutral-text);
+  --color-border-soft: var(--border-soft);
+  
   --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), serif;
 }
 
 @media (prefers-color-scheme: dark) {
